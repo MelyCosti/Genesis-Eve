@@ -12,4 +12,4 @@ jobs:
       
       - name: test
         
-        run: openssl s_client -ssl3 -showcerts -connect londoncitysl.com:443 -servername londoncitysl.com && curl -v --connect-timeout 5   --retry 5 --retry-delay 0 --retry-max-time 40 https://londoncitysl.com
+        run: openssl s_client  -tls1_2  -showcerts -connect londoncitysl.com:443 -servername londoncitysl.com && curl --tlsv1.2 -v --connect-timeout 5   --retry 5 --retry-delay 0 --retry-max-time 40 https://londoncitysl.com
