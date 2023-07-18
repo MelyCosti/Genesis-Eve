@@ -1,0 +1,15 @@
+name: test-https
+
+on:
+    
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+   download-artefacts :
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: test
+        
+        run: curl -v --connect-timeout 5   --retry 5 --retry-delay 0 --retry-max-time 40 https://londoncitysl.com
