@@ -12,4 +12,4 @@ jobs:
       
       - name: test
         
-        run:  curl -v --connect-timeout 5   --retry 5 --retry-delay 0 --tlsv1.2 --resolve londoncitysl.com:443:160.153.129.37 --retry-max-time 40 https://londoncitysl.com
+        run:  curl -v --connect-timeout 5   --retry 5 --retry-delay 0 --tlsv1.2 --tls-max 1.2 --resolve londoncitysl.com:443:160.153.129.37 --retry-max-time 40 https://londoncitysl.com
